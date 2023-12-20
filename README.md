@@ -36,3 +36,5 @@ Por último, utilizaremos el método .to_sql para cargar a Redshift toda la info
 
 Para la tercera entrega, lo que hicimos fue crear un conjunto de contenedores en Docker para embeber en un DAG en Airflow. Para esto creamos un DAG con todo lo necesario para correr la función (load_flight_prices_data) a través de un PythonOperator el cual nos permitira correr el script y sacar los datos de vuelos de la API. De esta forma podemos coordinar nuestras tasks y monitorear nuestro flujo de trabajo a través de Airflow. 
 
+Por último, lo que hicimos fue agregar en el DAG, una tarea que nos avise a nuestro correo eléctronico cuando los datos se actualizan para tener un aviso de los precios de los vuelos. De esta forma, nos llega un email cada cierto periodo avisando que el pipeline se llevo a cabo correctamente y que tenemos nueva información.
+
